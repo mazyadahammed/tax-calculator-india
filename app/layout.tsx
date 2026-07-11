@@ -64,6 +64,11 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
+
+  // Search Console Verification
+  verification: {
+    google: "GAI5uKnasm-IGU6V8tMaj8Bx6Reh_5NChc8qKwOZLO4",
+  },
 };
 
 export default function RootLayout({
