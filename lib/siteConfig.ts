@@ -1,7 +1,7 @@
 // Single source of truth for all SEO and schema references.
 // Update SITE_URL before deploying to production.
-export const SITE_URL = "https://taxtool.in";
-export const SITE_NAME = "TaxTool.in";
+export const SITE_URL = "https://thinkfinance.vercel.app";
+export const SITE_NAME = "ThinkFinance";
 
 export const PAGES = {
   home:       { path: "/",           priority: 1.0, changeFreq: "weekly"  as const },
