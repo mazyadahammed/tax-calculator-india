@@ -1,0 +1,101 @@
+import Link from "next/link";
+import AdSlot from "./AdSlot";
+
+// ---------------------------------------------------------------------------
+// Footer — contains:
+//   1. A horizontal leaderboard ad zone (above footer text).
+//      Replace <AdSlot> with your AdSense unit when live.
+//   2. Full site navigation links for crawlability / internal linking.
+//   3. Legal disclaimer required for tax-related sites.
+// ---------------------------------------------------------------------------
+
+const TOOL_LINKS = [
+  { href: "/",        label: "Income Tax Calculator" },
+  { href: "/compare", label: "Old vs New Regime" },
+  { href: "/hra",     label: "HRA Exemption" },
+  { href: "/salary",  label: "Salary Calculator" },
+];
+
+export default function Footer() {
+  return (
+    <footer className="border-t border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950">
+
+      {/*
+        ── FOOTER AD ZONE ──────────────────────────────────────────────────
+        Position: directly above footer text — high viewability, low intrusiveness.
+        Unit: 728×90 Leaderboard (best for desktop) / 320×50 on mobile.
+
+        TO ACTIVATE: replace <AdSlot> with your AdSense <ins> tag.
+        Keep the py-6 padding wrapper so the ad breathes and isn't clipped.
+        ──────────────────────────────────────────────────────────────────── */}
+      <div className="py-5 bg-gray-50 dark:bg-gray-900/40 border-b border-gray-100 dark:border-gray-800/60">
+        <AdSlot id="footer-leaderboard" format="horizontal" />
+      </div>
+
+      {/* Footer body */}
+      <div className="max-w-7xl mx-auto px-4 py-8 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 sm:grid-cols-4 gap-8">
+
+          {/* Brand */}
+          <div className="space-y-3 col-span-1 sm:col-span-2">
+            <span className="text-lg font-extrabold bg-gradient-to-r from-emerald-600 to-teal-500 bg-clip-text text-transparent">
+              TaxTool.in
+            </span>
+            <p className="text-xs text-gray-500 dark:text-gray-400 leading-relaxed">
+              Fast, accurate income tax comparisons for Indian taxpayers. All calculations run locally in your browser — no data is ever sent to a server.
+            </p>
+          </div>
+
+          {/* Tools list — good for internal linking & SEO */}
+          <div>
+            <h3 className="text-[10px] font-bold uppercase tracking-widest text-gray-400 mb-3">Calculators</h3>
+            <ul className="space-y-2">
+              {TOOL_LINKS.map(({ href, label }) => (
+                <li key={href}>
+                  <Link
+                    href={href}
+                    className="text-xs text-gray-500 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
+                  >
+                    {label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Legal */}
+          <div>
+            <h3 className="text-[10px] font-bold uppercase tracking-widest text-gray-400 mb-3">Legal</h3>
+            <ul className="space-y-2">
+              {[
+                { href: "/disclaimer", label: "Disclaimer" },
+                { href: "/privacy",    label: "Privacy Policy" },
+                { href: "/terms",      label: "Terms of Use" },
+              ].map(({ href, label }) => (
+                <li key={href}>
+                  <Link
+                    href={href}
+                    className="text-xs text-gray-500 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
+                  >
+                    {label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+
+        {/* Legal disclaimer */}
+        <div className="mt-8 pt-6 border-t border-gray-100 dark:border-gray-800 space-y-2">
+          <p className="text-[10px] text-gray-400 dark:text-gray-500 leading-relaxed text-center">
+            <strong>Disclaimer:</strong> All calculations on TaxTool.in are for illustrative and informational purposes only.
+            Tax rules change frequently. Please consult a qualified Chartered Accountant or tax advisor before filing your return.
+          </p>
+          <p className="text-[10px] text-gray-400 dark:text-gray-500 text-center">
+            &copy; {new Date().getFullYear()} TaxTool.in — Not affiliated with the Income Tax Department of India.
+          </p>
+        </div>
+      </div>
+    </footer>
+  );
+}

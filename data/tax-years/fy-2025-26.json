@@ -1,0 +1,63 @@
+{
+  "fy": "2025-26",
+  "ay": "2026-27",
+  "newRegime": {
+    "slabs": [
+      { "limit": 400000, "rate": 0 },
+      { "limit": 800000, "rate": 0.05 },
+      { "limit": 1200000, "rate": 0.10 },
+      { "limit": 1600000, "rate": 0.15 },
+      { "limit": 2000000, "rate": 0.20 },
+      { "limit": 2400000, "rate": 0.25 },
+      { "limit": null, "rate": 0.30 }
+    ],
+    "standardDeduction": 75000,
+    "rebate87A": {
+      "incomeLimit": 1200000,
+      "maxRebate": 60000,
+      "marginalRelief": true
+    },
+    "surcharge": [
+      { "limit": 5000000, "rate": 0 },
+      { "limit": 10000000, "rate": 0.10 },
+      { "limit": 20000000, "rate": 0.15 },
+      { "limit": null, "rate": 0.25 }
+    ],
+    "cess": 0.04
+  },
+  "oldRegime": {
+    "slabsByAge": {
+      "general": [
+        { "limit": 250000, "rate": 0 },
+        { "limit": 500000, "rate": 0.05 },
+        { "limit": 1000000, "rate": 0.20 },
+        { "limit": null, "rate": 0.30 }
+      ],
+      "senior": [
+        { "limit": 300000, "rate": 0 },
+        { "limit": 500000, "rate": 0.05 },
+        { "limit": 1000000, "rate": 0.20 },
+        { "limit": null, "rate": 0.30 }
+      ],
+      "superSenior": [
+        { "limit": 500000, "rate": 0 },
+        { "limit": 1000000, "rate": 0.20 },
+        { "limit": null, "rate": 0.30 }
+      ]
+    },
+    "standardDeduction": 50000,
+    "rebate87A": {
+      "incomeLimit": 500000,
+      "maxRebate": 12500,
+      "marginalRelief": false
+    },
+    "surcharge": [
+      { "limit": 5000000, "rate": 0 },
+      { "limit": 10000000, "rate": 0.10 },
+      { "limit": 20000000, "rate": 0.15 },
+      { "limit": 50000000, "rate": 0.25 },
+      { "limit": null, "rate": 0.37 }
+    ],
+    "cess": 0.04
+  }
+}

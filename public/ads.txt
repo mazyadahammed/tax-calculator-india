@@ -1,0 +1,10 @@
+# ads.txt — required by Google AdSense for publisher identity verification.
+# Without this file, AdSense may withhold revenue from your site.
+#
+# HOW TO ACTIVATE:
+#   1. Replace XXXXXXXXXXXXXXXX with your actual AdSense publisher ID.
+#      You can find it at: https://adsense.google.com → Account → Account info
+#   2. Deploy your site. Google's crawler will verify this file.
+#
+# FORMAT: ad_system_domain, publisher_id, account_type, certification_authority
+google.com, pub-XXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0
