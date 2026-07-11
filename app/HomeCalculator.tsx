@@ -188,15 +188,23 @@ export default function HomeCalculator() {
 
           {/* Deductions Card */}
           <div className="bg-white dark:bg-gray-900 rounded-xl p-5 border border-gray-200 dark:border-gray-800 shadow-sm space-y-4">
-            <h2 className="text-lg font-bold text-gray-900 dark:text-white border-b border-gray-100 dark:border-gray-800 pb-2">
-              2. Old Regime Deductions
-            </h2>
+            <div className="border-b border-gray-100 dark:border-gray-800 pb-2">
+              <h2 className="text-lg font-bold text-gray-900 dark:text-white">
+                2. Old Regime Deductions
+              </h2>
+              <p className="text-xs text-gray-400 mt-0.5">
+                These investments only save tax if you choose the Old Tax Regime.
+              </p>
+            </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
-                <label className="block text-xs font-semibold text-gray-500 dark:text-gray-400 mb-1">
+                <label className="block text-xs font-semibold text-gray-500 dark:text-gray-400">
                   Section 80C (Max ₹1.5L)
                 </label>
+                <span className="text-[10px] text-gray-400 dark:text-gray-500 block mb-1">
+                  PPF, EPF, LIC, ELSS Mutual Funds, School fees
+                </span>
                 <input
                   type="number"
                   value={basic80C || ""}
@@ -207,9 +215,12 @@ export default function HomeCalculator() {
               </div>
 
               <div>
-                <label className="block text-xs font-semibold text-gray-500 dark:text-gray-400 mb-1">
+                <label className="block text-xs font-semibold text-gray-500 dark:text-gray-400">
                   Section 80D (Health Insurance)
                 </label>
+                <span className="text-[10px] text-gray-400 dark:text-gray-500 block mb-1">
+                  Medical insurance premium for you, family & parents
+                </span>
                 <input
                   type="number"
                   value={medical80D || ""}
@@ -220,9 +231,12 @@ export default function HomeCalculator() {
               </div>
 
               <div>
-                <label className="block text-xs font-semibold text-gray-500 dark:text-gray-400 mb-1">
+                <label className="block text-xs font-semibold text-gray-500 dark:text-gray-400">
                   Section 24b (Home Loan Interest)
                 </label>
+                <span className="text-[10px] text-gray-400 dark:text-gray-500 block mb-1">
+                  Interest paid on home loan for self-occupied house
+                </span>
                 <input
                   type="number"
                   value={homeLoan24B || ""}
@@ -233,9 +247,12 @@ export default function HomeCalculator() {
               </div>
 
               <div>
-                <label className="block text-xs font-semibold text-gray-500 dark:text-gray-400 mb-1">
+                <label className="block text-xs font-semibold text-gray-500 dark:text-gray-400">
                   HRA Exemption (House Rent)
                 </label>
+                <span className="text-[10px] text-gray-400 dark:text-gray-500 block mb-1">
+                  Tax-free part of rent paid. Use the HRA Calculator to estimate.
+                </span>
                 <input
                   type="number"
                   value={hraExemption || ""}
@@ -246,9 +263,12 @@ export default function HomeCalculator() {
               </div>
 
               <div>
-                <label className="block text-xs font-semibold text-gray-500 dark:text-gray-400 mb-1">
+                <label className="block text-xs font-semibold text-gray-500 dark:text-gray-400">
                   80CCD(1B) Voluntary NPS (Max ₹50k)
                 </label>
+                <span className="text-[10px] text-gray-400 dark:text-gray-500 block mb-1">
+                  Additional self contribution to National Pension System
+                </span>
                 <input
                   type="number"
                   value={nps80CCD1B || ""}
@@ -259,9 +279,12 @@ export default function HomeCalculator() {
               </div>
 
               <div>
-                <label className="block text-xs font-semibold text-gray-500 dark:text-gray-400 mb-1">
-                  80CCD(2) NPS Employer portion (Both regimes)
+                <label className="block text-xs font-semibold text-gray-500 dark:text-gray-400">
+                  80CCD(2) NPS Employer portion
                 </label>
+                <span className="text-[10px] text-gray-400 dark:text-gray-500 block mb-1">
+                  Company&apos;s contribution to your NPS (Allowed in both regimes)
+                </span>
                 <input
                   type="number"
                   value={employerNps80CCD2 || ""}
@@ -272,9 +295,12 @@ export default function HomeCalculator() {
               </div>
 
               <div>
-                <label className="block text-xs font-semibold text-gray-500 dark:text-gray-400 mb-1">
+                <label className="block text-xs font-semibold text-gray-500 dark:text-gray-400">
                   Professional Tax (Annual)
                 </label>
+                <span className="text-[10px] text-gray-400 dark:text-gray-500 block mb-1">
+                  State-level tax deducted from your monthly salary slip
+                </span>
                 <input
                   type="number"
                   value={professionalTax || ""}
@@ -285,9 +311,12 @@ export default function HomeCalculator() {
               </div>
 
               <div>
-                <label className="block text-xs font-semibold text-gray-500 dark:text-gray-400 mb-1">
+                <label className="block text-xs font-semibold text-gray-500 dark:text-gray-400">
                   Other Exemptions (LTA, 80G, etc.)
                 </label>
+                <span className="text-[10px] text-gray-400 dark:text-gray-500 block mb-1">
+                  Leave Travel, donations, or other miscellaneous deductions
+                </span>
                 <input
                   type="number"
                   value={otherDeductions + ltaExemption || ""}
@@ -471,6 +500,41 @@ export default function HomeCalculator() {
             <p className="text-[10px] text-gray-400 italic">
               * Note: Take-home calculation assumes the recommended better regime to maximize your savings.
             </p>
+          </div>
+
+          {/* Fresher's Guide Card */}
+          <div className="bg-emerald-50/50 dark:bg-emerald-950/10 rounded-xl p-5 border border-emerald-100 dark:border-emerald-900/50 space-y-4">
+            <div className="flex items-center gap-2">
+              <svg className="w-5 h-5 text-emerald-600 dark:text-emerald-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+              </svg>
+              <h3 className="font-bold text-gray-900 dark:text-white text-sm">
+                Fresher&apos;s Quick Tax Guide
+              </h3>
+            </div>
+            
+            <div className="space-y-3.5 text-xs text-gray-600 dark:text-gray-400 leading-relaxed">
+              <div>
+                <span className="font-bold text-emerald-800 dark:text-emerald-400 block mb-0.5">
+                  1. What is a &quot;Tax Regime&quot;?
+                </span>
+                Think of regimes as two different pathways. The **Old Regime** lets you save tax if you invest in PPF, LIC, or pay home rent, but has higher tax rates. The **New Regime** gives you much lower tax rates, but you can&apos;t claim investment discounts.
+              </div>
+              
+              <div>
+                <span className="font-bold text-emerald-800 dark:text-emerald-400 block mb-0.5">
+                  2. Why is the New Regime usually best for first job earners?
+                </span>
+                As a fresher, you might not want to lock up ₹1.5 Lakh of your salary in savings schemes. The New Regime makes income up to **₹12 Lakh completely tax-free** (FY 2025-26 rules), giving you maximum in-hand cash to spend or invest freely.
+              </div>
+
+              <div>
+                <span className="font-bold text-emerald-800 dark:text-emerald-400 block mb-0.5">
+                  3. What is the Standard Deduction?
+                </span>
+                It&apos;s a flat tax-free discount of **₹75,000** (New Regime) or **₹50,000** (Old Regime) given automatically to all salaried employees. You don&apos;t need to buy anything or submit any bills to your company to get this discount.
+              </div>
+            </div>
           </div>
 
         </div>
