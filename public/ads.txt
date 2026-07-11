@@ -7,4 +7,4 @@
 #   2. Deploy your site. Google's crawler will verify this file.
 #
 # FORMAT: ad_system_domain, publisher_id, account_type, certification_authority
-google.com, pub-XXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0
+google.com, pub-6101534407339968, DIRECT, f08c47fec0942fa0

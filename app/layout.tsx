@@ -4,6 +4,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import AdSidebar from "@/components/AdSidebar";
 import { SITE_URL, SITE_NAME } from "@/lib/siteConfig";
+import Script from "next/script";
 
 // ---------------------------------------------------------------------------
 // ADSENSE ACTIVATION CHECKLIST
@@ -77,18 +78,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        {/*
-          ── ADSENSE SCRIPT ──────────────────────────────────────────────
-          Uncomment once AdSense approves your site:
-
-          import Script from "next/script";
-          <Script
-            async
-            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-YOUR_PUBLISHER_ID"
-            crossOrigin="anonymous"
-            strategy="afterInteractive"
-          />
-          ──────────────────────────────────────────────────────────────── */}
+        <Script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6101534407339968"
+          crossOrigin="anonymous"
+          strategy="afterInteractive"
+        />
       </head>
       <body className="antialiased bg-gray-50 text-gray-900 dark:bg-gray-950 dark:text-gray-100 flex flex-col min-h-screen">
         <Header />
