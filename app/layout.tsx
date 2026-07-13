@@ -52,6 +52,12 @@ export const metadata: Metadata = {
   verification: {
     google: "GAI5uKnasm-IGU6V8tMaj8Bx6Reh_5NChc8qKwOZLO4",
   },
+
+  other: {
+    // HilltopAds site ownership verification
+    "3941aaa8590915f93b00be7153271065bcefd6d9":
+      "3941aaa8590915f93b00be7153271065bcefd6d9",
+  },
 };
 
 export default function RootLayout({
