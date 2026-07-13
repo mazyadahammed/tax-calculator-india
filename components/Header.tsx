@@ -6,13 +6,12 @@ import { usePathname } from "next/navigation";
 import ThemeToggle from "./ThemeToggle";
 
 const NAV_LINKS = [
-  { href: "/",        label: "Tax Calculator" },
-  { href: "/compare", label: "Old vs New" },
-  { href: "/hra",     label: "HRA Exemption" },
-  { href: "/salary",  label: "Salary" },
-  { href: "/multiple-form16", label: "Multiple Form-16s" },
-  { href: "/freelancer-tax-44ada", label: "Freelancer Tax" },
-  { href: "/ae",      label: "UAE Gratuity" },
+  { href: "/start-here",     label: "Start Here" },
+  { href: "/investing",      label: "Investing" },
+  { href: "/debt",           label: "Debt Payoff" },
+  { href: "/savings",        label: "Savings" },
+  { href: "/calculators",    label: "Calculators" },
+  { href: "/country-guides", label: "Country Guides" },
 ];
 
 export default function Header() {

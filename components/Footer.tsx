@@ -1,14 +1,18 @@
 import Link from "next/link";
 
-const TOOL_LINKS = [
-  { href: "/",                     label: "Income Tax Calculator" },
-  { href: "/compare",              label: "Old vs New Regime" },
-  { href: "/hra",                  label: "HRA Exemption" },
-  { href: "/salary",               label: "Salary Calculator" },
-  { href: "/multiple-form16",      label: "Multiple Form-16" },
-  { href: "/freelancer-tax-44ada", label: "Freelancer Tax (44ADA)" },
-  { href: "/salary-hub",           label: "Salary Hub" },
-  { href: "/ae",                   label: "UAE Gratuity Calculator" },
+const PILLAR_LINKS = [
+  { href: "/start-here",     label: "Start Here" },
+  { href: "/investing",      label: "Investing Basics" },
+  { href: "/debt",           label: "Debt Payoff" },
+  { href: "/savings",        label: "Savings Goals" },
+];
+
+const CALC_LINKS = [
+  { href: "/in",             label: "India Tax Calculator" },
+  { href: "/ae",             label: "UAE Gratuity Calculator" },
+  { href: "/hra",            label: "HRA Exemption" },
+  { href: "/salary",         label: "Salary Calculator" },
+  { href: "/calculators",    label: "All Calculators" },
 ];
 
 export default function Footer() {
@@ -27,11 +31,28 @@ export default function Footer() {
             </p>
           </div>
 
-          {/* Tools list */}
+          {/* Pillars List */}
+          <div>
+            <h3 className="text-[10px] font-bold uppercase tracking-widest text-gray-400 mb-3">Guides</h3>
+            <ul className="space-y-2">
+              {PILLAR_LINKS.map(({ href, label }) => (
+                <li key={href}>
+                  <Link
+                    href={href}
+                    className="text-xs text-gray-500 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
+                  >
+                    {label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Calculators list */}
           <div>
             <h3 className="text-[10px] font-bold uppercase tracking-widest text-gray-400 mb-3">Calculators</h3>
             <ul className="space-y-2">
-              {TOOL_LINKS.map(({ href, label }) => (
+              {CALC_LINKS.map(({ href, label }) => (
                 <li key={href}>
                   <Link
                     href={href}
