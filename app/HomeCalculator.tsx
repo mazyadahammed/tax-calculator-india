@@ -9,7 +9,7 @@ import {
   compareRegimes,
   calculateTakeHome,
 } from "@/lib/tax";
-import AdSlot from "@/components/AdSlot";
+
 import TrustBadge from "@/components/TrustBadge";
 
 export default function HomeCalculator() {
@@ -107,15 +107,7 @@ export default function HomeCalculator() {
         </p>
       </div>
 
-      {/*
-        ── AD ZONE 1: Sub-headline Leaderboard ──────────────────────────────
-        Position: directly below H1, above the calculator form.
-        Why here: high viewability, above the fold on desktop, below LCP element
-                  so it does not delay Largest Contentful Paint.
-        Unit: 728×90 Leaderboard / 320×50 mobile banner.
-        TO ACTIVATE: replace <AdSlot> with your AdSense <ins> tag.
-        ──────────────────────────────────────────────────────────────────── */}
-      <AdSlot id="home-top-leaderboard" format="horizontal" adSlotId="3856192945" className="mb-6" />
+
 
       {/* Two-column responsive layout */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
@@ -455,15 +447,7 @@ export default function HomeCalculator() {
             </div>
           </div>
 
-          {/*
-            ── AD ZONE 2: Mid-content Rectangle ─────────────────────────────
-            Position: between comparison table and take-home card.
-            Why here: user has just seen their tax breakdown — high engagement
-                      moment with strong intent for financial products.
-            Unit: 336×280 Large Rectangle (best CTR for in-content ads).
-            TO ACTIVATE: replace <AdSlot> with your AdSense <ins> tag.
-            ──────────────────────────────────────────────────────────────── */}
-          <AdSlot id="home-mid-rectangle" format="rectangle" adSlotId="7563348132" className="mx-auto my-2" />
+
 
           {/* Take Home Salary breakdown */}
           <div className="bg-white dark:bg-gray-900 rounded-xl p-5 border border-gray-200 dark:border-gray-800 shadow-sm space-y-4">
@@ -540,15 +524,7 @@ export default function HomeCalculator() {
         </div>
       </div>
 
-      {/*
-        ── AD ZONE 3: Post-results Leaderboard ──────────────────────────────
-        Position: after the full results block, before page end.
-        Why here: user has consumed all content — excellent viewability score.
-                  Low intrusiveness since it is below the fold.
-        Unit: 728×90 Leaderboard / 320×50 mobile banner.
-        TO ACTIVATE: replace <AdSlot> with your AdSense <ins> tag.
-        ──────────────────────────────────────────────────────────────────── */}
-      <AdSlot id="home-bottom-leaderboard" format="horizontal" adSlotId="3856192945" className="mt-8" />
+
     </div>
   );
 }

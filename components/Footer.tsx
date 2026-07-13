@@ -1,13 +1,4 @@
 import Link from "next/link";
-import AdSlot from "./AdSlot";
-
-// ---------------------------------------------------------------------------
-// Footer — contains:
-//   1. A horizontal leaderboard ad zone (above footer text).
-//      Replace <AdSlot> with your AdSense unit when live.
-//   2. Full site navigation links for crawlability / internal linking.
-//   3. Legal disclaimer required for tax-related sites.
-// ---------------------------------------------------------------------------
 
 const TOOL_LINKS = [
   { href: "/",        label: "Income Tax Calculator" },
@@ -19,20 +10,6 @@ const TOOL_LINKS = [
 export default function Footer() {
   return (
     <footer className="border-t border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950">
-
-      {/*
-        ── FOOTER AD ZONE ──────────────────────────────────────────────────
-        Position: directly above footer text — high viewability, low intrusiveness.
-        Unit: 728×90 Leaderboard (best for desktop) / 320×50 on mobile.
-
-        TO ACTIVATE: replace <AdSlot> with your AdSense <ins> tag.
-        Keep the py-6 padding wrapper so the ad breathes and isn't clipped.
-        ──────────────────────────────────────────────────────────────────── */}
-      <div className="py-5 bg-gray-50 dark:bg-gray-900/40 border-b border-gray-100 dark:border-gray-800/60">
-        <AdSlot id="footer-leaderboard" format="horizontal" adSlotId="3856192945" />
-      </div>
-
-      {/* Footer body */}
       <div className="max-w-7xl mx-auto px-4 py-8 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 sm:grid-cols-4 gap-8">
 
@@ -46,7 +23,7 @@ export default function Footer() {
             </p>
           </div>
 
-          {/* Tools list — good for internal linking & SEO */}
+          {/* Tools list */}
           <div>
             <h3 className="text-[10px] font-bold uppercase tracking-widest text-gray-400 mb-3">Calculators</h3>
             <ul className="space-y-2">

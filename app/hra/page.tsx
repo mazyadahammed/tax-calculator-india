@@ -3,7 +3,7 @@ import Link from "next/link";
 import { SITE_URL, SITE_NAME } from "@/lib/siteConfig";
 import { webApplicationSchema, faqPageSchema, breadcrumbSchema } from "@/lib/schema";
 import SchemaScript from "@/components/SchemaScript";
-import AdSlot from "@/components/AdSlot";
+
 import FaqSection from "@/components/FaqSection";
 import HraCalculator from "./HraCalculator";
 
@@ -62,7 +62,7 @@ export default function HraPage() {
   return (
     <div className="max-w-5xl mx-auto px-4 py-8 sm:px-6 lg:px-8">
       <SchemaScript schemas={schemas} />
-      <AdSlot id="hra-top-leaderboard" format="horizontal" adSlotId="3856192945" className="mb-6" />
+
 
       {/* Breadcrumb */}
       <nav aria-label="Breadcrumb" className="mb-4">
@@ -113,7 +113,7 @@ export default function HraPage() {
       </div>
 
       <FaqSection faqs={FAQS} title="HRA Exemption FAQs" />
-      <AdSlot id="hra-bottom-leaderboard" format="horizontal" adSlotId="3856192945" className="mt-8" />
+
     </div>
   );
 }
