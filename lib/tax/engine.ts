@@ -168,6 +168,8 @@ export function calculateOldRegime(
   const pt = income.grossSalary > 0 ? deductions.professionalTax : 0;
 
   const capped80C = Math.min(150000, deductions.basicSection80C);
+  // 80CCD(1B) — additional NPS contribution, capped at ₹50,000 by statute
+  const cappedNps80CCD1B = Math.min(50000, deductions.nps80CCD1B);
 
   const totalDeductions =
     stdDed +
@@ -175,7 +177,7 @@ export function calculateOldRegime(
     capped80C +
     deductions.medicalSection80D +
     deductions.homeLoanInterest24B +
-    deductions.nps80CCD1B +
+    cappedNps80CCD1B +
     deductions.employerNps80CCD2 +
     deductions.hraExemption +
     deductions.ltaExemption +

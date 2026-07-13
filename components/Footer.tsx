@@ -1,10 +1,13 @@
 import Link from "next/link";
 
 const TOOL_LINKS = [
-  { href: "/",        label: "Income Tax Calculator" },
-  { href: "/compare", label: "Old vs New Regime" },
-  { href: "/hra",     label: "HRA Exemption" },
-  { href: "/salary",  label: "Salary Calculator" },
+  { href: "/",                     label: "Income Tax Calculator" },
+  { href: "/compare",              label: "Old vs New Regime" },
+  { href: "/hra",                  label: "HRA Exemption" },
+  { href: "/salary",               label: "Salary Calculator" },
+  { href: "/multiple-form16",      label: "Multiple Form-16" },
+  { href: "/freelancer-tax-44ada", label: "Freelancer Tax (44ADA)" },
+  { href: "/salary-hub",           label: "Salary Hub" },
 ];
 
 export default function Footer() {
