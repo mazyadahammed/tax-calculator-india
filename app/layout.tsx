@@ -2,11 +2,11 @@ import type { Metadata } from "next";
 import "@/styles/globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import HilltopAds from "@/components/HilltopAds";
 import { SITE_URL, SITE_NAME } from "@/lib/siteConfig";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
+  referrer: "no-referrer-when-downgrade",
 
   title: {
     default: `Income Tax Calculator FY 2025-26 | ${SITE_NAME}`,
@@ -82,7 +82,6 @@ export default function RootLayout({
         />
       </head>
       <body className="antialiased bg-gray-50 text-gray-900 dark:bg-gray-950 dark:text-gray-100 flex flex-col min-h-screen">
-        <HilltopAds />
         <Header />
         <main className="flex-grow w-full">
           {children}
