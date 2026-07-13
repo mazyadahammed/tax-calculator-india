@@ -53,21 +53,8 @@ export default function AboutPage() {
                 Mazyad is a software engineer passionate about personal finance and building client-side web tools. By combining financial math with modern SEO practices, he builds lightweight, high-performance financial engines.
               </p>
 
-              {/* PLACEHOLDERS FOR EXTERNAL VERIFICATION */}
               <div className="text-xs text-gray-400 dark:text-gray-500 italic space-y-1">
-                <p>💡 Add your LinkedIn or Twitter link here.</p>
                 <p>🎓 Verified using official guidelines issued by the Income Tax Department of India.</p>
-              </div>
-
-              <div className="pt-2">
-                <a
-                  href="https://linkedin.com/in/placeholder"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center text-xs font-bold text-emerald-600 hover:text-emerald-500 dark:text-emerald-400"
-                >
-                  Connect on LinkedIn →
-                </a>
               </div>
             </div>
           </div>

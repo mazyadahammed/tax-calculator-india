@@ -57,6 +57,7 @@ export default function HraCalculator() {
               <span className="absolute inset-y-0 left-0 pl-3 flex items-center text-gray-400">₹</span>
               <input
                 type="number"
+                inputMode="numeric"
                 min="0"
                 value={basicSalary || ""}
                 onChange={(e) => setBasicSalary(Math.max(0, Number(e.target.value)))}
@@ -77,6 +78,7 @@ export default function HraCalculator() {
               <span className="absolute inset-y-0 left-0 pl-3 flex items-center text-gray-400">₹</span>
               <input
                 type="number"
+                inputMode="numeric"
                 min="0"
                 value={hraReceived || ""}
                 onChange={(e) => setHraReceived(Math.max(0, Number(e.target.value)))}
@@ -94,6 +96,7 @@ export default function HraCalculator() {
               <span className="absolute inset-y-0 left-0 pl-3 flex items-center text-gray-400">₹</span>
               <input
                 type="number"
+                inputMode="numeric"
                 min="0"
                 value={rentPaid || ""}
                 onChange={(e) => setRentPaid(Math.max(0, Number(e.target.value)))}

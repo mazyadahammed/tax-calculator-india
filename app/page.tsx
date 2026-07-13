@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import Link from "next/link";
 import { SITE_URL, SITE_NAME } from "@/lib/siteConfig";
-import { webApplicationSchema } from "@/lib/schema";
+import { webApplicationSchema, faqPageSchema } from "@/lib/schema";
 import SchemaScript from "@/components/SchemaScript";
 import VerificationBadge from "@/components/VerificationBadge";
 import TrustBadge from "@/components/TrustBadge";
@@ -79,15 +79,18 @@ const GENERAL_FAQS = [
 ];
 
 export default function HomePage() {
-  const schema = webApplicationSchema({
-    name: TITLE,
-    description: DESCRIPTION,
-    path: "/",
-  });
+  const schemas = [
+    webApplicationSchema({
+      name: TITLE,
+      description: DESCRIPTION,
+      path: "/",
+    }),
+    faqPageSchema(GENERAL_FAQS),
+  ];
 
   return (
     <div className="max-w-7xl mx-auto px-4 py-12 sm:px-6 lg:px-8 space-y-16">
-      <SchemaScript schemas={schema} />
+      <SchemaScript schemas={schemas} />
 
       {/* Hero Section */}
       <div className="text-center max-w-3xl mx-auto space-y-5">

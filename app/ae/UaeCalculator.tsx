@@ -146,6 +146,7 @@ export default function UaeCalculator() {
               <span className="absolute inset-y-0 left-0 pl-3 flex items-center text-gray-400">AED</span>
               <input
                 type="number"
+                inputMode="numeric"
                 min="0"
                 value={basicSalary || ""}
                 onChange={(e) => setBasicSalary(Math.max(0, Number(e.target.value)))}
@@ -167,6 +168,7 @@ export default function UaeCalculator() {
               <span className="absolute inset-y-0 left-0 pl-3 flex items-center text-gray-400">AED</span>
               <input
                 type="number"
+                inputMode="numeric"
                 min="0"
                 value={allowances || ""}
                 onChange={(e) => setAllowances(Math.max(0, Number(e.target.value)))}
@@ -222,6 +224,7 @@ export default function UaeCalculator() {
                 <label className="block text-[10px] text-gray-400 mb-1">Years</label>
                 <input
                   type="number"
+                  inputMode="numeric"
                   min="0"
                   value={years}
                   onChange={(e) => setYears(Math.max(0, Number(e.target.value)))}
@@ -232,6 +235,7 @@ export default function UaeCalculator() {
                 <label className="block text-[10px] text-gray-400 mb-1">Months</label>
                 <input
                   type="number"
+                  inputMode="numeric"
                   min="0"
                   max="11"
                   value={months}
@@ -243,6 +247,7 @@ export default function UaeCalculator() {
                 <label className="block text-[10px] text-gray-400 mb-1">Days</label>
                 <input
                   type="number"
+                  inputMode="numeric"
                   min="0"
                   max="364"
                   value={days}
