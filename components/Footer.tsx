@@ -8,6 +8,7 @@ const TOOL_LINKS = [
   { href: "/multiple-form16",      label: "Multiple Form-16" },
   { href: "/freelancer-tax-44ada", label: "Freelancer Tax (44ADA)" },
   { href: "/salary-hub",           label: "Salary Hub" },
+  { href: "/ae",                   label: "UAE Gratuity Calculator" },
 ];
 
 export default function Footer() {
@@ -22,7 +23,7 @@ export default function Footer() {
               ThinkFinance
             </span>
             <p className="text-xs text-gray-500 dark:text-gray-400 leading-relaxed">
-              Fast, accurate income tax comparisons for Indian taxpayers. All calculations run locally in your browser — no data is ever sent to a server.
+              Fast, accurate personal tax and salary calculators for India and the UAE. All calculations run locally in your browser — no data is ever sent to a server.
             </p>
           </div>
 

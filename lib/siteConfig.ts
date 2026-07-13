@@ -13,6 +13,7 @@ export const PAGES = {
   multipleForm16:   { path: "/multiple-form16",   priority: 0.8, changeFreq: "monthly" as const },
   freelancerTax:    { path: "/freelancer-tax-44ada", priority: 0.8, changeFreq: "monthly" as const },
   salaryHub:        { path: "/salary-hub",       priority: 0.7, changeFreq: "monthly" as const },
+  uaeCalculator:    { path: "/ae",               priority: 0.8, changeFreq: "monthly" as const },
   about:            { path: "/about",            priority: 0.6, changeFreq: "monthly" as const },
   contact:          { path: "/contact",          priority: 0.6, changeFreq: "monthly" as const },
   disclaimer:       { path: "/disclaimer",       priority: 0.5, changeFreq: "yearly"  as const },
