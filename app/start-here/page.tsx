@@ -1,25 +1,58 @@
 import { Metadata } from "next";
 import Link from "next/link";
-import { SITE_URL } from "@/lib/siteConfig";
+import { SITE_URL, SITE_NAME } from "@/lib/siteConfig";
 import SchemaScript from "@/components/SchemaScript";
-import { webApplicationSchema } from "@/lib/schema";
+import { faqPageSchema, breadcrumbSchema } from "@/lib/schema";
 
-const TITLE = "Personal Finance 101: Start Here | ThinkFinance";
+const TITLE = "How to Start Managing Your Money: Beginner Finance Checklist";
 const DESCRIPTION =
-  "A simple, step-by-step checklist to organize your money, pay off debt, build an emergency fund, and start investing for your future.";
+  "New to personal finance? Follow this 5-step money checklist: build a budget, create an emergency fund, pay off debt, grow savings, and start investing — in the right order.";
 
 export const metadata: Metadata = {
   title: TITLE,
   description: DESCRIPTION,
   alternates: { canonical: `${SITE_URL}/start-here` },
+  openGraph: {
+    title: TITLE,
+    description: DESCRIPTION,
+    url: `${SITE_URL}/start-here`,
+    siteName: SITE_NAME,
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: TITLE,
+    description: DESCRIPTION,
+  },
 };
 
+const FAQS = [
+  {
+    question: "What is the first step to managing money?",
+    answer:
+      "Start by tracking every expense for one month to understand your spending patterns. Then create a simple budget using the 50/30/20 rule: 50% for needs (rent, food, utilities), 30% for wants (entertainment, dining), and 20% for savings and debt repayment.",
+  },
+  {
+    question: "How much should I have in an emergency fund?",
+    answer:
+      "Aim for 3 to 6 months of essential living expenses. Start with a starter fund of $1,000 (or the equivalent in your currency) as fast as possible, then build it up to the full amount over time while continuing to invest.",
+  },
+  {
+    question: "Should I invest or pay off debt first?",
+    answer:
+      "Pay off any debt with an interest rate above 7-8% first — such as credit cards or high-interest personal loans. Once that high-interest debt is gone, investing typically generates better long-term returns than continuing to aggressively pay down low-interest debt like student loans or mortgages.",
+  },
+];
+
 export default function StartHerePage() {
-  const schema = webApplicationSchema({
-    name: TITLE,
-    description: DESCRIPTION,
-    path: "/start-here",
-  });
+  const schemas = [
+    faqPageSchema(FAQS),
+    breadcrumbSchema([
+      { name: "Home", path: "/" },
+      { name: "Start Here", path: "/start-here" },
+    ]),
+  ];
 
   const steps = [
     {
@@ -51,7 +84,18 @@ export default function StartHerePage() {
 
   return (
     <div className="max-w-4xl mx-auto px-4 py-12 sm:px-6 lg:px-8 space-y-12">
-      <SchemaScript schemas={schema} />
+      <SchemaScript schemas={schemas} />
+
+      {/* Breadcrumb */}
+      <nav aria-label="Breadcrumb">
+        <ol className="flex items-center space-x-2 text-xs text-gray-500 dark:text-gray-400">
+          <li>
+            <Link href="/" className="hover:text-emerald-600 dark:hover:text-emerald-400">Home</Link>
+          </li>
+          <li aria-hidden="true">/</li>
+          <li className="text-gray-900 dark:text-white font-medium">Start Here</li>
+        </ol>
+      </nav>
 
       {/* Header */}
       <div className="text-center max-w-2xl mx-auto space-y-3">
@@ -81,9 +125,53 @@ export default function StartHerePage() {
         ))}
       </div>
 
+      {/* Related Guides — Internal linking cluster */}
+      <div className="max-w-2xl mx-auto space-y-4">
+        <h2 className="text-lg font-bold text-gray-900 dark:text-white">Dig Deeper Into Each Step</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          <Link
+            href="/debt"
+            className="group bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-xl p-4 text-center hover:border-red-400 transition-colors"
+          >
+            <div className="text-2xl mb-2">🏔️</div>
+            <p className="text-sm font-bold text-gray-900 dark:text-white group-hover:text-red-600 dark:group-hover:text-red-400">Debt Payoff Guide</p>
+            <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">Snowball vs. Avalanche</p>
+          </Link>
+          <Link
+            href="/savings"
+            className="group bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-xl p-4 text-center hover:border-amber-400 transition-colors"
+          >
+            <div className="text-2xl mb-2">🏦</div>
+            <p className="text-sm font-bold text-gray-900 dark:text-white group-hover:text-amber-600 dark:group-hover:text-amber-400">Savings Strategies</p>
+            <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">HYSAs & automation</p>
+          </Link>
+          <Link
+            href="/investing"
+            className="group bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-xl p-4 text-center hover:border-blue-400 transition-colors"
+          >
+            <div className="text-2xl mb-2">📈</div>
+            <p className="text-sm font-bold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400">Investing Basics</p>
+            <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">Index funds & ETFs</p>
+          </Link>
+        </div>
+      </div>
+
+      {/* FAQ Section */}
+      <div className="max-w-2xl mx-auto space-y-4">
+        <h2 className="text-xl font-bold text-gray-900 dark:text-white">Frequently Asked Questions</h2>
+        <div className="space-y-4">
+          {FAQS.map(({ question, answer }) => (
+            <div key={question} className="bg-white dark:bg-gray-900 border border-gray-150 dark:border-gray-800 p-5 rounded-xl">
+              <h3 className="text-sm font-bold text-gray-900 dark:text-white mb-2">{question}</h3>
+              <p className="text-xs text-gray-600 dark:text-gray-400 leading-relaxed">{answer}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
       {/* CTA Box */}
       <div className="bg-emerald-50/50 dark:bg-emerald-950/10 border border-emerald-100 dark:border-emerald-900/50 p-6 rounded-2xl max-w-2xl mx-auto text-center space-y-4">
-        <h2 className="text-lg font-bold text-gray-900 dark:text-white">Need local tax & gratuity calculations?</h2>
+        <h2 className="text-lg font-bold text-gray-900 dark:text-white">Need local tax &amp; gratuity calculations?</h2>
         <p className="text-xs text-gray-600 dark:text-gray-400">
           Browse our localized tools to calculate precise take-home salary, income tax brackets, or gratuity payouts.
         </p>

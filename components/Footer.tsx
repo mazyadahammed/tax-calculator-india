@@ -1,10 +1,11 @@
 import Link from "next/link";
 
 const PILLAR_LINKS = [
-  { href: "/start-here",     label: "Start Here" },
-  { href: "/investing",      label: "Investing Basics" },
-  { href: "/debt",           label: "Debt Payoff" },
-  { href: "/savings",        label: "Savings Goals" },
+  { href: "/start-here",      label: "Start Here" },
+  { href: "/investing",       label: "Investing Basics" },
+  { href: "/debt",            label: "Debt Payoff" },
+  { href: "/savings",         label: "Savings Goals" },
+  { href: "/country-guides",  label: "Country Guides" },
 ];
 
 const CALC_LINKS = [
@@ -27,7 +28,7 @@ export default function Footer() {
               ThinkFinance
             </span>
             <p className="text-xs text-gray-500 dark:text-gray-400 leading-relaxed">
-              Fast, accurate personal tax and salary calculators for India and the UAE. All calculations run locally in your browser — no data is ever sent to a server.
+              Fast, accurate personal finance guides and calculators — free, globally accessible, and always run locally in your browser.
             </p>
           </div>
 

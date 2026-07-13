@@ -11,11 +11,11 @@ export const metadata: Metadata = {
   referrer: "no-referrer-when-downgrade",
 
   title: {
-    default: `Income Tax Calculator FY 2025-26 | ${SITE_NAME}`,
+    default: `Personal Finance Guides & Calculators | ${SITE_NAME}`,
     template: `%s | ${SITE_NAME}`,
   },
   description:
-    "Compare Old vs New tax regimes under Budget 2025 rules. Calculate take-home salary, HRA exemption, and more. Fast, free, and mobile-friendly.",
+    "Free personal finance guides and calculators for budgeting, investing, debt payoff, and savings. Country-specific tools for India, UAE, and more.",
 
   alternates: {
     canonical: "/",
@@ -24,13 +24,13 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     siteName: SITE_NAME,
-    locale: "en_IN",
+    locale: "en_US",
     images: [
       {
         url: `${SITE_URL}/opengraph-image.png`,
         width: 1200,
         height: 630,
-        alt: `Income Tax Calculator FY 2025-26 | ${SITE_NAME}`,
+        alt: `Personal Finance Guides & Calculators | ${SITE_NAME}`,
       },
     ],
   },

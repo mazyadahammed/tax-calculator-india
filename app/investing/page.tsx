@@ -1,8 +1,8 @@
 import { Metadata } from "next";
 import Link from "next/link";
-import { SITE_URL } from "@/lib/siteConfig";
+import { SITE_URL, SITE_NAME } from "@/lib/siteConfig";
 import SchemaScript from "@/components/SchemaScript";
-import { webApplicationSchema } from "@/lib/schema";
+import { faqPageSchema, breadcrumbSchema } from "@/lib/schema";
 
 const TITLE = "How to Start Investing with Little Money | Index Funds Guide";
 const DESCRIPTION =
@@ -12,18 +12,62 @@ export const metadata: Metadata = {
   title: TITLE,
   description: DESCRIPTION,
   alternates: { canonical: `${SITE_URL}/investing` },
+  openGraph: {
+    title: TITLE,
+    description: DESCRIPTION,
+    url: `${SITE_URL}/investing`,
+    siteName: SITE_NAME,
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: TITLE,
+    description: DESCRIPTION,
+  },
 };
 
+const FAQS = [
+  {
+    question: "How much money do I need to start investing?",
+    answer:
+      "You can start investing with as little as $1 to $5 using fractional shares on modern brokerage platforms. Consistency matters far more than the starting amount — investing $50 per month regularly will beat waiting until you have a large lump sum.",
+  },
+  {
+    question: "What is the difference between an index fund and an ETF?",
+    answer:
+      "Both track a basket of stocks (like the S&P 500), but ETFs trade on exchanges throughout the day like individual stocks, while index funds are priced once at the end of the trading day. For most beginner investors, both are excellent choices — the key factor is picking whichever has the lowest expense ratio.",
+  },
+  {
+    question: "What is dollar-cost averaging (DCA)?",
+    answer:
+      "Dollar-cost averaging means investing a fixed amount (e.g., $50 per month) on a regular schedule regardless of market conditions. It removes emotion from investing and naturally reduces the risk of buying everything at the worst possible market peak.",
+  },
+];
+
 export default function InvestingPage() {
-  const schema = webApplicationSchema({
-    name: TITLE,
-    description: DESCRIPTION,
-    path: "/investing",
-  });
+  const schemas = [
+    faqPageSchema(FAQS),
+    breadcrumbSchema([
+      { name: "Home", path: "/" },
+      { name: "Investing Basics", path: "/investing" },
+    ]),
+  ];
 
   return (
     <div className="max-w-4xl mx-auto px-4 py-12 sm:px-6 lg:px-8 space-y-12">
-      <SchemaScript schemas={schema} />
+      <SchemaScript schemas={schemas} />
+
+      {/* Breadcrumb */}
+      <nav aria-label="Breadcrumb">
+        <ol className="flex items-center space-x-2 text-xs text-gray-500 dark:text-gray-400">
+          <li>
+            <Link href="/" className="hover:text-emerald-600 dark:hover:text-emerald-400">Home</Link>
+          </li>
+          <li aria-hidden="true">/</li>
+          <li className="text-gray-900 dark:text-white font-medium">Investing Basics</li>
+        </ol>
+      </nav>
 
       {/* Header */}
       <div className="text-center max-w-2xl mx-auto space-y-3">
@@ -53,13 +97,13 @@ export default function InvestingPage() {
         {/* Core Concept 2 */}
         <section className="bg-white dark:bg-gray-900 border border-gray-150 dark:border-gray-800 p-6 rounded-xl space-y-3">
           <h2 className="text-lg font-bold text-gray-900 dark:text-white flex items-center gap-2">
-            <span>🛡️</span> 2. What are Index Funds & ETFs?
+            <span>🛡️</span> 2. What are Index Funds &amp; ETFs?
           </h2>
           <p>
             Instead of trying to pick individual stocks (which is risky and often fails), index funds and Exchange-Traded Funds (ETFs) let you buy a tiny slice of hundreds of companies at once.
           </p>
           <p>
-            An ETF that tracks the S&P 500 (like VOO or SPY) gives you instant ownership in the 500 largest US companies—including Apple, Microsoft, Amazon, and Google. If one company fails, your portfolio is protected by the success of the other 499.
+            An ETF that tracks the S&amp;P 500 (like VOO or SPY) gives you instant ownership in the 500 largest US companies—including Apple, Microsoft, Amazon, and Google. If one company fails, your portfolio is protected by the success of the other 499.
           </p>
         </section>
 
@@ -77,6 +121,50 @@ export default function InvestingPage() {
             <li><strong>Reinvest Dividends:</strong> Enable DRIP (Dividend Reinvestment Plan) to buy more shares automatically.</li>
           </ul>
         </section>
+      </div>
+
+      {/* Related Guides — Internal linking */}
+      <div className="max-w-3xl mx-auto space-y-4">
+        <h2 className="text-lg font-bold text-gray-900 dark:text-white">Before You Invest, Check These First</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          <Link
+            href="/start-here"
+            className="group bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-xl p-4 text-center hover:border-emerald-400 transition-colors"
+          >
+            <div className="text-2xl mb-2">✅</div>
+            <p className="text-sm font-bold text-gray-900 dark:text-white group-hover:text-emerald-600">Finance Checklist</p>
+            <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">5-step beginner guide</p>
+          </Link>
+          <Link
+            href="/debt"
+            className="group bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-xl p-4 text-center hover:border-red-400 transition-colors"
+          >
+            <div className="text-2xl mb-2">🏔️</div>
+            <p className="text-sm font-bold text-gray-900 dark:text-white group-hover:text-red-600">Pay Off Debt First</p>
+            <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">Snowball vs. Avalanche</p>
+          </Link>
+          <Link
+            href="/savings"
+            className="group bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-xl p-4 text-center hover:border-amber-400 transition-colors"
+          >
+            <div className="text-2xl mb-2">🏦</div>
+            <p className="text-sm font-bold text-gray-900 dark:text-white group-hover:text-amber-600">Build Savings First</p>
+            <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">Emergency fund strategy</p>
+          </Link>
+        </div>
+      </div>
+
+      {/* FAQ Section */}
+      <div className="max-w-3xl mx-auto space-y-4">
+        <h2 className="text-xl font-bold text-gray-900 dark:text-white">Frequently Asked Questions</h2>
+        <div className="space-y-4">
+          {FAQS.map(({ question, answer }) => (
+            <div key={question} className="bg-white dark:bg-gray-900 border border-gray-150 dark:border-gray-800 p-5 rounded-xl">
+              <h3 className="text-sm font-bold text-gray-900 dark:text-white mb-2">{question}</h3>
+              <p className="text-xs text-gray-600 dark:text-gray-400 leading-relaxed">{answer}</p>
+            </div>
+          ))}
+        </div>
       </div>
 
       {/* CTA Box */}
