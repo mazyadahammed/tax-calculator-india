@@ -11,6 +11,10 @@ import {
 } from "@/lib/tax";
 
 import TrustBadge from "@/components/TrustBadge";
+import VerificationBadge from "@/components/VerificationBadge";
+import AffiliateSavings from "@/components/AffiliateSavings";
+import AudienceCapture from "@/components/AudienceCapture";
+import AdSlot from "@/components/AdSlot";
 
 export default function HomeCalculator() {
   const config = fyData as unknown as TaxYearConfig;
@@ -98,7 +102,8 @@ export default function HomeCalculator() {
     <div className="max-w-5xl mx-auto px-4 py-8 sm:px-6 lg:px-8">
 
       {/* Page title — rendered first so it does NOT block LCP */}
-      <div className="mb-5 text-center sm:text-left">
+      <div className="mb-5 text-center sm:text-left space-y-3">
+        <VerificationBadge />
         <h1 className="text-3xl font-extrabold text-gray-900 dark:text-white">
           India Tax Calculator <span className="text-emerald-600 dark:text-emerald-400">FY 2025-26</span>
         </h1>
@@ -486,6 +491,9 @@ export default function HomeCalculator() {
             </p>
           </div>
 
+          {/* Affiliate Integration */}
+          <AffiliateSavings />
+
           {/* Fresher's Guide Card */}
           <div className="bg-emerald-50/50 dark:bg-emerald-950/10 rounded-xl p-5 border border-emerald-100 dark:border-emerald-900/50 space-y-4">
             <div className="flex items-center gap-2">
@@ -524,6 +532,9 @@ export default function HomeCalculator() {
         </div>
       </div>
 
+      {/* Audience Capture Form */}
+      <AudienceCapture />
+      <AdSlot id="home-bottom-ad" format="horizontal" className="mt-8" />
 
     </div>
   );

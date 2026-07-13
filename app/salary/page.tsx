@@ -5,6 +5,10 @@ import { webApplicationSchema, faqPageSchema, breadcrumbSchema } from "@/lib/sch
 import SchemaScript from "@/components/SchemaScript";
 
 import FaqSection from "@/components/FaqSection";
+import VerificationBadge from "@/components/VerificationBadge";
+import AffiliateSavings from "@/components/AffiliateSavings";
+import AudienceCapture from "@/components/AudienceCapture";
+import AdSlot from "@/components/AdSlot";
 import SalaryCalculator from "./SalaryCalculator";
 
 const TITLE = "Take-Home Salary Calculator FY 2025-26 — In-Hand Monthly";
@@ -74,10 +78,10 @@ export default function SalaryPage() {
       </nav>
 
       {/* Header */}
-      <div className="text-center max-w-3xl mx-auto mb-10">
+      <div className="text-center max-w-3xl mx-auto mb-10 space-y-4">
+        <VerificationBadge />
         <h1 className="text-3xl font-extrabold text-gray-900 dark:text-white sm:leading-tight">
-          Take-Home Salary Calculator{" "}
-          <span className="text-emerald-600 dark:text-emerald-400">FY 2025-26</span>
+          Take-Home Salary Calculator <span className="text-emerald-600 dark:text-emerald-400">FY 2025-26</span>
         </h1>
         <p className="mt-2 text-sm text-gray-500 dark:text-gray-400">
           Estimate your monthly in-hand payout after standard deductions, EPF, Professional Tax, and income tax TDS.
@@ -117,6 +121,12 @@ export default function SalaryPage() {
           </Link>
           .
         </p>
+      </div>
+
+      <div className="max-w-4xl mx-auto space-y-6 mt-8">
+        <AffiliateSavings />
+        <AudienceCapture />
+        <AdSlot id="salary-bottom-ad" format="horizontal" className="mt-6" />
       </div>
 
       <FaqSection faqs={FAQS} title="Salary Calculator FAQs" />

@@ -5,6 +5,10 @@ import { webApplicationSchema, faqPageSchema, breadcrumbSchema } from "@/lib/sch
 import SchemaScript from "@/components/SchemaScript";
 
 import FaqSection from "@/components/FaqSection";
+import VerificationBadge from "@/components/VerificationBadge";
+import AffiliateSavings from "@/components/AffiliateSavings";
+import AudienceCapture from "@/components/AudienceCapture";
+import AdSlot from "@/components/AdSlot";
 import HraCalculator from "./HraCalculator";
 
 const TITLE = "HRA Tax Exemption Calculator FY 2025-26";
@@ -74,10 +78,10 @@ export default function HraPage() {
       </nav>
 
       {/* Header */}
-      <div className="text-center max-w-3xl mx-auto mb-10">
+      <div className="text-center max-w-3xl mx-auto mb-10 space-y-4">
+        <VerificationBadge />
         <h1 className="text-3xl font-extrabold text-gray-900 dark:text-white sm:leading-tight">
-          HRA Exemption Calculator{" "}
-          <span className="text-emerald-600 dark:text-emerald-400">FY 2025-26</span>
+          HRA Exemption Calculator <span className="text-emerald-600 dark:text-emerald-400">FY 2025-26</span>
         </h1>
         <p className="mt-2 text-sm text-gray-500 dark:text-gray-400">
           Determine the exact House Rent Allowance amount exempt from income tax under Section 10(13A).
@@ -110,6 +114,12 @@ export default function HraPage() {
           </Link>{" "}
           to enter your HRA exemption and compare total tax liability.
         </p>
+      </div>
+
+      <div className="max-w-4xl mx-auto space-y-6 mt-8">
+        <AffiliateSavings />
+        <AudienceCapture />
+        <AdSlot id="hra-bottom-ad" format="horizontal" className="mt-6" />
       </div>
 
       <FaqSection faqs={FAQS} title="HRA Exemption FAQs" />

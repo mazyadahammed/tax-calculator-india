@@ -7,9 +7,11 @@ import ThemeToggle from "./ThemeToggle";
 
 const NAV_LINKS = [
   { href: "/",        label: "Tax Calculator" },
-  { href: "/compare", label: "Old vs New Regime" },
+  { href: "/compare", label: "Old vs New" },
   { href: "/hra",     label: "HRA Exemption" },
-  { href: "/salary",  label: "Salary Calculator" },
+  { href: "/salary",  label: "Salary" },
+  { href: "/multiple-form16", label: "Multiple Form-16s" },
+  { href: "/freelancer-tax-44ada", label: "Freelancer Tax" },
 ];
 
 export default function Header() {

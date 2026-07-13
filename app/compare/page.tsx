@@ -5,6 +5,10 @@ import { webApplicationSchema, faqPageSchema, breadcrumbSchema } from "@/lib/sch
 import SchemaScript from "@/components/SchemaScript";
 
 import FaqSection from "@/components/FaqSection";
+import VerificationBadge from "@/components/VerificationBadge";
+import AffiliateSavings from "@/components/AffiliateSavings";
+import AudienceCapture from "@/components/AudienceCapture";
+import AdSlot from "@/components/AdSlot";
 
 const TITLE = "Old vs New Tax Regime Comparison FY 2025-26";
 const DESCRIPTION =
@@ -68,10 +72,10 @@ export default function ComparePage() {
       </nav>
 
       {/* Title */}
-      <div className="text-center max-w-3xl mx-auto mb-10">
+      <div className="text-center max-w-3xl mx-auto mb-10 space-y-4">
+        <VerificationBadge />
         <h1 className="text-3xl font-extrabold text-gray-900 dark:text-white sm:leading-tight">
-          Old vs New Tax Regime{" "}
-          <span className="text-emerald-600 dark:text-emerald-400">FY 2025-26</span>
+          Old vs New Tax Regime <span className="text-emerald-600 dark:text-emerald-400">FY 2025-26</span>
         </h1>
         <p className="mt-2 text-sm text-gray-500 dark:text-gray-400">
           Understand the slab differences, standard deductions, and find which taxation regime suits your income bracket.
@@ -175,9 +179,13 @@ export default function ComparePage() {
             </ul>
           </div>
 
+          <AffiliateSavings />
+          <AdSlot id="sidebar-rect-ad" format="rectangle" className="mt-4" />
 
         </div>
       </div>
+
+      <AudienceCapture />
 
       <FaqSection faqs={FAQS} title="Old vs New Tax Regime FAQs" />
 

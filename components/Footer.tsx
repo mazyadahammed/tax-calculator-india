@@ -45,6 +45,8 @@ export default function Footer() {
             <h3 className="text-[10px] font-bold uppercase tracking-widest text-gray-400 mb-3">Legal</h3>
             <ul className="space-y-2">
               {[
+                { href: "/about",      label: "About Us" },
+                { href: "/contact",    label: "Contact" },
                 { href: "/disclaimer", label: "Disclaimer" },
                 { href: "/privacy",    label: "Privacy Policy" },
                 { href: "/terms",      label: "Terms of Use" },
