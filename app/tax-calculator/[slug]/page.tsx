@@ -7,7 +7,6 @@ import fyData from "@/data/tax-years/fy-2025-26.json";
 import { TaxYearConfig, compareRegimes } from "@/lib/tax";
 import VerificationBadge from "@/components/VerificationBadge";
 import AffiliateSavings from "@/components/AffiliateSavings";
-import AudienceCapture from "@/components/AudienceCapture";
 import SchemaScript from "@/components/SchemaScript";
 import { webApplicationSchema, breadcrumbSchema } from "@/lib/schema";
 
@@ -193,9 +192,6 @@ export default function TaxCalculatorLpaPage({ params }: Props) {
 
       {/* Affiliate recommendations */}
       <AffiliateSavings />
-
-      {/* Audience Capture Form */}
-      <AudienceCapture />
 
       {/* Nearby Links */}
       <div className="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-xl p-6 shadow-sm space-y-3">

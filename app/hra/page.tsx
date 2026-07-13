@@ -7,8 +7,6 @@ import SchemaScript from "@/components/SchemaScript";
 import FaqSection from "@/components/FaqSection";
 import VerificationBadge from "@/components/VerificationBadge";
 import AffiliateSavings from "@/components/AffiliateSavings";
-import AudienceCapture from "@/components/AudienceCapture";
-import AdSlot from "@/components/AdSlot";
 import HraCalculator from "./HraCalculator";
 
 const TITLE = "HRA Tax Exemption Calculator FY 2025-26";
@@ -118,8 +116,6 @@ export default function HraPage() {
 
       <div className="max-w-4xl mx-auto space-y-6 mt-8">
         <AffiliateSavings />
-        <AudienceCapture />
-        <AdSlot id="hra-bottom-ad" format="horizontal" className="mt-6" />
       </div>
 
       <FaqSection faqs={FAQS} title="HRA Exemption FAQs" />

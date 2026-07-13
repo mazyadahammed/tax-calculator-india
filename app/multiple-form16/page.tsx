@@ -6,7 +6,6 @@ import fyData from "@/data/tax-years/fy-2025-26.json";
 import { TaxYearConfig } from "@/lib/tax";
 import VerificationBadge from "@/components/VerificationBadge";
 import AffiliateSavings from "@/components/AffiliateSavings";
-import AudienceCapture from "@/components/AudienceCapture";
 
 interface EmployerSalary {
   id: string;
@@ -225,9 +224,6 @@ export default function MultipleForm16Page() {
 
       {/* Affiliate actions */}
       <AffiliateSavings />
-
-      {/* Audience Capture Form */}
-      <AudienceCapture />
     </div>
   );
 }

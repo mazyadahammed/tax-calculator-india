@@ -7,8 +7,6 @@ import SchemaScript from "@/components/SchemaScript";
 import FaqSection from "@/components/FaqSection";
 import VerificationBadge from "@/components/VerificationBadge";
 import AffiliateSavings from "@/components/AffiliateSavings";
-import AudienceCapture from "@/components/AudienceCapture";
-import AdSlot from "@/components/AdSlot";
 import SalaryCalculator from "./SalaryCalculator";
 
 const TITLE = "Take-Home Salary Calculator FY 2025-26 — In-Hand Monthly";
@@ -125,8 +123,6 @@ export default function SalaryPage() {
 
       <div className="max-w-4xl mx-auto space-y-6 mt-8">
         <AffiliateSavings />
-        <AudienceCapture />
-        <AdSlot id="salary-bottom-ad" format="horizontal" className="mt-6" />
       </div>
 
       <FaqSection faqs={FAQS} title="Salary Calculator FAQs" />

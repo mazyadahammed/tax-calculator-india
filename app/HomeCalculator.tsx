@@ -13,8 +13,6 @@ import {
 import TrustBadge from "@/components/TrustBadge";
 import VerificationBadge from "@/components/VerificationBadge";
 import AffiliateSavings from "@/components/AffiliateSavings";
-import AudienceCapture from "@/components/AudienceCapture";
-import AdSlot from "@/components/AdSlot";
 
 export default function HomeCalculator() {
   const config = fyData as unknown as TaxYearConfig;
@@ -531,11 +529,6 @@ export default function HomeCalculator() {
 
         </div>
       </div>
-
-      {/* Audience Capture Form */}
-      <AudienceCapture />
-      <AdSlot id="home-bottom-ad" format="horizontal" className="mt-8" />
-
     </div>
   );
 }

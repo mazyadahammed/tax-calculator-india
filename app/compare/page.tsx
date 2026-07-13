@@ -7,8 +7,6 @@ import SchemaScript from "@/components/SchemaScript";
 import FaqSection from "@/components/FaqSection";
 import VerificationBadge from "@/components/VerificationBadge";
 import AffiliateSavings from "@/components/AffiliateSavings";
-import AudienceCapture from "@/components/AudienceCapture";
-import AdSlot from "@/components/AdSlot";
 
 const TITLE = "Old vs New Tax Regime Comparison FY 2025-26";
 const DESCRIPTION =
@@ -180,12 +178,10 @@ export default function ComparePage() {
           </div>
 
           <AffiliateSavings />
-          <AdSlot id="sidebar-rect-ad" format="rectangle" className="mt-4" />
 
         </div>
       </div>
 
-      <AudienceCapture />
 
       <FaqSection faqs={FAQS} title="Old vs New Tax Regime FAQs" />
 

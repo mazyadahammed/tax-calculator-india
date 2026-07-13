@@ -6,7 +6,6 @@ import fyData from "@/data/tax-years/fy-2025-26.json";
 import { TaxYearConfig } from "@/lib/tax";
 import VerificationBadge from "@/components/VerificationBadge";
 import AffiliateSavings from "@/components/AffiliateSavings";
-import AudienceCapture from "@/components/AudienceCapture";
 
 export default function FreelancerTax44adaPage() {
   const [grossReceipts, setGrossReceipts] = useState<number>(1500000);
@@ -182,9 +181,6 @@ export default function FreelancerTax44adaPage() {
 
       {/* Affiliate recommendations */}
       <AffiliateSavings />
-
-      {/* Audience Capture Form */}
-      <AudienceCapture />
     </div>
   );
 }
