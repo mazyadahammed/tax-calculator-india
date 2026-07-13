@@ -1,19 +1,6 @@
 "use client";
 
-// ---------------------------------------------------------------------------
-// AdSlot component — CLS-safe ad placeholder.
-//
-// HOW TO ACTIVATE ADS:
-//   1. Sign up for Google AdSense (https://adsense.google.com).
-//   2. Add your AdSense <script> tag to app/layout.tsx <head>.
-//   3. Replace the <div> below with your <ins class="adsbygoogle"> code.
-//   4. Remove the placeholder label and border styles once live.
-//
-// IMPORTANT: Never remove the outer wrapper div or change its inline
-// dimensions. Fixed width/height prevents Cumulative Layout Shift (CLS)
-// and keeps Core Web Vitals green. AdSense requires the container to
-// have a stable size before the ad loads.
-// ---------------------------------------------------------------------------
+import { useEffect } from "react";
 
 interface AdSlotProps {
   id: string;
@@ -24,6 +11,7 @@ interface AdSlotProps {
    */
   format?: "horizontal" | "rectangle" | "vertical";
   className?: string;
+  adSlotId?: string; // Optional real Google AdSense ad slot ID
 }
 
 /** Explicit pixel-locked sizes prevent layout shift (CLS = 0).
@@ -53,46 +41,54 @@ export default function AdSlot({
   id,
   format = "horizontal",
   className = "",
+  adSlotId,
 }: AdSlotProps) {
   const s = SIZE[format];
 
+  // Initialize the ad slot when the component mounts
+  useEffect(() => {
+    if (adSlotId) {
+      try {
+        const adsbygoogle = (window as any).adsbygoogle || [];
+        adsbygoogle.push({});
+      } catch (err) {
+        console.error("AdSense error inside AdSlot:", err);
+      }
+    }
+  }, [adSlotId]);
+
   return (
-    /**
-     * TO REPLACE WITH REAL ADS:
-     * Remove the inner <div> placeholder and insert your AdSense <ins> tag here.
-     * Keep this outer <div> wrapper with its fixed dimensions intact.
-     *
-     * Example:
-     *   <ins
-     *     className="adsbygoogle"
-     *     style={{ display: "block" }}
-     *     data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
-     *     data-ad-slot="XXXXXXXXXX"
-     *     data-ad-format="auto"
-     *     data-full-width-responsive="true"
-     *   />
-     */
     <div
       id={id}
       className={`${s.wrapper} ${className} overflow-hidden`}
       aria-label="Advertisement"
       data-ad-format={format}
     >
-      {/* ── PLACEHOLDER – delete this inner div when going live ── */}
-      <div
-        className={`${s.inner} w-full flex flex-col items-center justify-center gap-1
-          bg-gray-50 dark:bg-gray-900/30
-          border border-dashed border-gray-200 dark:border-gray-800
-          rounded-lg select-none`}
-      >
-        <span className="text-[9px] uppercase tracking-widest font-semibold text-gray-300 dark:text-gray-700">
-          Ad
-        </span>
-        <span className="text-[9px] text-gray-300 dark:text-gray-700 font-mono">
-          {s.label}
-        </span>
-      </div>
-      {/* ── END PLACEHOLDER ── */}
+      {adSlotId ? (
+        <ins
+          className="adsbygoogle"
+          style={{ display: "block", width: "100%", height: "100%" }}
+          data-ad-client="ca-pub-6101534407339968"
+          data-ad-slot={adSlotId}
+          data-ad-format={format === "vertical" ? "vertical" : "auto"}
+          data-full-width-responsive={format !== "vertical" ? "true" : "false"}
+        />
+      ) : (
+        /* ── PLACEHOLDER – renders when no real adSlotId is provided ── */
+        <div
+          className={`${s.inner} w-full flex flex-col items-center justify-center gap-1
+            bg-gray-50 dark:bg-gray-900/30
+            border border-dashed border-gray-200 dark:border-gray-800
+            rounded-lg select-none`}
+        >
+          <span className="text-[9px] uppercase tracking-widest font-semibold text-gray-300 dark:text-gray-700">
+            Ad
+          </span>
+          <span className="text-[9px] text-gray-300 dark:text-gray-700 font-mono">
+            {s.label}
+          </span>
+        </div>
+      )}
     </div>
   );
 }

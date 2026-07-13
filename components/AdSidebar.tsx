@@ -29,7 +29,7 @@ export default function AdSidebar() {
               data-ad-slot="XXXXXXXXXX"
             />
         */}
-        <AdSlot id="sidebar-skyscraper" format="vertical" />
+        <AdSlot id="sidebar-skyscraper" format="vertical" adSlotId="8014929809" />
       </div>
     </aside>
   );

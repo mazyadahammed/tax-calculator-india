@@ -115,7 +115,7 @@ export default function HomeCalculator() {
         Unit: 728×90 Leaderboard / 320×50 mobile banner.
         TO ACTIVATE: replace <AdSlot> with your AdSense <ins> tag.
         ──────────────────────────────────────────────────────────────────── */}
-      <AdSlot id="home-top-leaderboard" format="horizontal" className="mb-6" />
+      <AdSlot id="home-top-leaderboard" format="horizontal" adSlotId="3856192945" className="mb-6" />
 
       {/* Two-column responsive layout */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
@@ -463,7 +463,7 @@ export default function HomeCalculator() {
             Unit: 336×280 Large Rectangle (best CTR for in-content ads).
             TO ACTIVATE: replace <AdSlot> with your AdSense <ins> tag.
             ──────────────────────────────────────────────────────────────── */}
-          <AdSlot id="home-mid-rectangle" format="rectangle" className="mx-auto my-2" />
+          <AdSlot id="home-mid-rectangle" format="rectangle" adSlotId="7563348132" className="mx-auto my-2" />
 
           {/* Take Home Salary breakdown */}
           <div className="bg-white dark:bg-gray-900 rounded-xl p-5 border border-gray-200 dark:border-gray-800 shadow-sm space-y-4">
@@ -548,7 +548,7 @@ export default function HomeCalculator() {
         Unit: 728×90 Leaderboard / 320×50 mobile banner.
         TO ACTIVATE: replace <AdSlot> with your AdSense <ins> tag.
         ──────────────────────────────────────────────────────────────────── */}
-      <AdSlot id="home-bottom-leaderboard" format="horizontal" className="mt-8" />
+      <AdSlot id="home-bottom-leaderboard" format="horizontal" adSlotId="3856192945" className="mt-8" />
     </div>
   );
 }

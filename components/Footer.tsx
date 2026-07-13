@@ -29,7 +29,7 @@ export default function Footer() {
         Keep the py-6 padding wrapper so the ad breathes and isn't clipped.
         ──────────────────────────────────────────────────────────────────── */}
       <div className="py-5 bg-gray-50 dark:bg-gray-900/40 border-b border-gray-100 dark:border-gray-800/60">
-        <AdSlot id="footer-leaderboard" format="horizontal" />
+        <AdSlot id="footer-leaderboard" format="horizontal" adSlotId="3856192945" />
       </div>
 
       {/* Footer body */}

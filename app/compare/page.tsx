@@ -56,7 +56,7 @@ export default function ComparePage() {
   return (
     <div className="max-w-5xl mx-auto px-4 py-8 sm:px-6 lg:px-8">
       <SchemaScript schemas={schemas} />
-      <AdSlot id="compare-top-leaderboard" format="horizontal" className="mb-6" />
+      <AdSlot id="compare-top-leaderboard" format="horizontal" adSlotId="3856192945" className="mb-6" />
 
       {/* Breadcrumb */}
       <nav aria-label="Breadcrumb" className="mb-4">
@@ -175,12 +175,12 @@ export default function ComparePage() {
             </ul>
           </div>
 
-          <AdSlot id="compare-sidebar-rect" format="rectangle" />
+          <AdSlot id="compare-sidebar-rect" format="rectangle" adSlotId="7563348132" />
         </div>
       </div>
 
       <FaqSection faqs={FAQS} title="Old vs New Tax Regime FAQs" />
-      <AdSlot id="compare-bottom-leaderboard" format="horizontal" className="mt-8" />
+      <AdSlot id="compare-bottom-leaderboard" format="horizontal" adSlotId="3856192945" className="mt-8" />
     </div>
   );
 }
