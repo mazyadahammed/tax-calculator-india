@@ -83,7 +83,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className="antialiased bg-gray-50 text-gray-900 dark:bg-gray-950 dark:text-gray-100 flex flex-col min-h-screen">
+      <body className="antialiased bg-gray-50 text-gray-900 dark:bg-gray-950 dark:text-gray-100 flex flex-col min-h-screen pb-[110px] md:pb-0">
         <GlobalAds />
         <Header />
         <main className="flex-grow w-full">

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useMemo } from "react";
+import HilltopAdBanner from "@/components/HilltopAdBanner";
 import TrustBadge from "@/components/TrustBadge";
 
 export default function HraCalculator() {
@@ -182,6 +183,8 @@ export default function HraCalculator() {
               </div>
             </div>
           </div>
+
+          <HilltopAdBanner />
 
           {/* HRA-specific disclaimer */}
           <TrustBadge context="HRA exemption is calculated using the three-condition minimum rule under Section 10(13A) and is available under the Old Tax Regime only." />
