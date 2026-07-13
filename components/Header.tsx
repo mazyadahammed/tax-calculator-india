@@ -29,9 +29,10 @@ export default function Header() {
           {/* Logo */}
           <Link href="/" className="flex-shrink-0 flex items-center space-x-1.5">
             <span className="text-lg font-extrabold bg-gradient-to-r from-emerald-600 to-teal-500 bg-clip-text text-transparent tracking-tight">
-              ThinkFinance
+              Clarvio
             </span>
           </Link>
+
 
           {/* Desktop nav */}
           <nav className="hidden md:flex items-center space-x-1" aria-label="Main navigation">

@@ -1,7 +1,7 @@
 // Single source of truth for all SEO and schema references.
 // Update SITE_URL before deploying to production.
 export const SITE_URL = "https://thinkfinance.vercel.app";
-export const SITE_NAME = "ThinkFinance";
+export const SITE_NAME = "Clarvio";
 export const LAST_REVIEWED_DATE = "July 2026";
 export const TAX_YEAR_VERIFIED = "FY 2025-26";
 

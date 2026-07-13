@@ -25,7 +25,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="space-y-3 col-span-1 sm:col-span-2">
             <span className="text-lg font-extrabold bg-gradient-to-r from-emerald-600 to-teal-500 bg-clip-text text-transparent">
-              ThinkFinance
+              Clarvio
             </span>
             <p className="text-xs text-gray-500 dark:text-gray-400 leading-relaxed">
               Fast, accurate personal finance guides and calculators — free, globally accessible, and always run locally in your browser.
@@ -93,11 +93,11 @@ export default function Footer() {
         {/* Legal disclaimer */}
         <div className="mt-8 pt-6 border-t border-gray-100 dark:border-gray-800 space-y-2">
           <p className="text-[10px] text-gray-400 dark:text-gray-500 leading-relaxed text-center">
-            <strong>Disclaimer:</strong> All calculations on ThinkFinance are for illustrative and informational purposes only.
+            <strong>Disclaimer:</strong> All calculations on Clarvio are for illustrative and informational purposes only.
             Tax rules change frequently. Please consult a qualified Chartered Accountant or tax advisor before filing your return.
           </p>
           <p className="text-[10px] text-gray-400 dark:text-gray-500 text-center">
-            &copy; {new Date().getFullYear()} ThinkFinance — Not affiliated with the Income Tax Department of India.
+            &copy; {new Date().getFullYear()} Clarvio — Not affiliated with the Income Tax Department of India.
           </p>
         </div>
       </div>

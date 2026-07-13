@@ -3,7 +3,7 @@ import { SITE_URL, SITE_NAME } from "@/lib/siteConfig";
 
 export const metadata: Metadata = {
   title: `Contact Us | ${SITE_NAME}`,
-  description: "Get in touch with the team at ThinkFinance for questions, suggestions, or feedback regarding our tax calculators.",
+  description: "Get in touch with the team at Clarvio for questions, suggestions, or feedback regarding our tax calculators.",
   alternates: { canonical: `${SITE_URL}/contact` },
 };
 
@@ -25,7 +25,7 @@ export default function ContactPage() {
             For any queries, calculations support, feedback, or potential advertising opportunities, please email us directly:
           </p>
           <p className="text-lg font-bold text-emerald-600 dark:text-emerald-400 select-all">
-            support@thinkfinance.vercel.app
+            support@clarvio.vercel.app
           </p>
           <p className="text-xs text-gray-400">
             We generally respond within 24 to 48 business hours.

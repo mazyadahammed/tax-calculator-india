@@ -4,7 +4,7 @@ import { SITE_URL, SITE_NAME } from "@/lib/siteConfig";
 import SchemaScript from "@/components/SchemaScript";
 import { faqPageSchema, breadcrumbSchema } from "@/lib/schema";
 
-const TITLE = "How to Reduce Debt Fast: Snowball vs Avalanche | ThinkFinance";
+const TITLE = "How to Reduce Debt Fast: Snowball vs Avalanche | Clarvio";
 const DESCRIPTION =
   "Discover the fastest ways to pay off debt. Compare the psychological advantages of the Debt Snowball with the mathematical savings of the Debt Avalanche.";
 

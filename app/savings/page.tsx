@@ -4,7 +4,7 @@ import { SITE_URL, SITE_NAME } from "@/lib/siteConfig";
 import SchemaScript from "@/components/SchemaScript";
 import { faqPageSchema, breadcrumbSchema } from "@/lib/schema";
 
-const TITLE = "How to Save Money Faster: Sinking Funds & HYSA | ThinkFinance";
+const TITLE = "How to Save Money Faster: Sinking Funds & HYSA | Clarvio";
 const DESCRIPTION =
   "Discover practical tactics on how to save money faster. Learn the 50/30/20 budget rule, high-yield savings accounts (HYSAs), and automating your emergency fund.";
 

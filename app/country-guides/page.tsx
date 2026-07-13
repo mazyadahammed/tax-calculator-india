@@ -4,7 +4,7 @@ import { SITE_URL } from "@/lib/siteConfig";
 import SchemaScript from "@/components/SchemaScript";
 import { webApplicationSchema } from "@/lib/schema";
 
-const TITLE = "Country Finance Guides & Local Tax Calculators | ThinkFinance";
+const TITLE = "Country Finance Guides & Local Tax Calculators | Clarvio";
 const DESCRIPTION =
   "Browse localized financial guides and tax tools tailored to country-specific legal structures, including India income tax and UAE salary gratuity details.";
 

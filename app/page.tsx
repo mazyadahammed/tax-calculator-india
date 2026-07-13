@@ -7,7 +7,7 @@ import VerificationBadge from "@/components/VerificationBadge";
 import TrustBadge from "@/components/TrustBadge";
 import FaqSection from "@/components/FaqSection";
 
-const TITLE = "ThinkFinance — Global Personal Finance Hub & Calculators";
+const TITLE = "Clarvio — Global Personal Finance Hub & Calculators";
 const DESCRIPTION =
   "Take control of your money. Learn budgeting, low-cost investing, debt payoff methods, and savings strategies with our free global guides and interactive calculators.";
 

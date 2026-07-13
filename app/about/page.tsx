@@ -3,7 +3,7 @@ import { SITE_URL, SITE_NAME } from "@/lib/siteConfig";
 
 export const metadata: Metadata = {
   title: `About Us | ${SITE_NAME}`,
-  description: "Learn more about the team behind ThinkFinance, our mission, values, and how we build accurate, privacy-first tax calculators.",
+  description: "Learn more about the team behind Clarvio, our mission, values, and how we build accurate, privacy-first tax calculators.",
   alternates: { canonical: `${SITE_URL}/about` },
 };
 
@@ -80,7 +80,7 @@ export default function AboutPage() {
             Have suggestions or found a bug? We&apos;d love to hear from you. Get in touch at:
           </p>
           <p className="text-sm font-bold text-emerald-600 dark:text-emerald-400">
-            support@thinkfinance.vercel.app
+            support@clarvio.vercel.app
           </p>
         </div>
       </div>

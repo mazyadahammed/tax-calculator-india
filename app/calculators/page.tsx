@@ -4,7 +4,7 @@ import { SITE_URL } from "@/lib/siteConfig";
 import SchemaScript from "@/components/SchemaScript";
 import { webApplicationSchema } from "@/lib/schema";
 
-const TITLE = "Financial Calculators Directory | ThinkFinance";
+const TITLE = "Financial Calculators Directory | Clarvio";
 const DESCRIPTION =
   "Access our suite of free, client-side personal finance calculators including HRA exemptions, take-home salary, India tax comparisons, and UAE gratuity payouts.";
 
