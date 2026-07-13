@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import "@/styles/globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import GlobalAds from "@/components/GlobalAds";
+import MobileStickyAd from "@/components/MobileStickyAd";
 import { SITE_URL, SITE_NAME } from "@/lib/siteConfig";
 
 export const metadata: Metadata = {
@@ -82,11 +84,13 @@ export default function RootLayout({
         />
       </head>
       <body className="antialiased bg-gray-50 text-gray-900 dark:bg-gray-950 dark:text-gray-100 flex flex-col min-h-screen">
+        <GlobalAds />
         <Header />
         <main className="flex-grow w-full">
           {children}
         </main>
         <Footer />
+        <MobileStickyAd />
       </body>
     </html>
   );

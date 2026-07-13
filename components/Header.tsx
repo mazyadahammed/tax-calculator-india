@@ -12,6 +12,7 @@ const NAV_LINKS = [
   { href: "/salary",  label: "Salary" },
   { href: "/multiple-form16", label: "Multiple Form-16s" },
   { href: "/freelancer-tax-44ada", label: "Freelancer Tax" },
+  { href: "/ae",      label: "UAE Gratuity" },
 ];
 
 export default function Header() {
