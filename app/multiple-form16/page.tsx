@@ -143,8 +143,9 @@ export default function MultipleForm16Page() {
                       </label>
                       <input
                         type="number"
+                        min="0"
                         value={emp.grossSalary || ""}
-                        onChange={(e) => updateEmployer(emp.id, "grossSalary", Number(e.target.value))}
+                        onChange={(e) => updateEmployer(emp.id, "grossSalary", Math.max(0, Number(e.target.value)))}
                         className="w-full px-2.5 py-1.5 text-xs bg-white dark:bg-gray-950 border border-gray-200 dark:border-gray-800 rounded-lg focus:outline-none focus:ring-1 focus:ring-emerald-500 text-gray-900 dark:text-white"
                       />
                     </div>
@@ -155,8 +156,9 @@ export default function MultipleForm16Page() {
                       </label>
                       <input
                         type="number"
+                        min="0"
                         value={emp.tdsDeducted || ""}
-                        onChange={(e) => updateEmployer(emp.id, "tdsDeducted", Number(e.target.value))}
+                        onChange={(e) => updateEmployer(emp.id, "tdsDeducted", Math.max(0, Number(e.target.value)))}
                         className="w-full px-2.5 py-1.5 text-xs bg-white dark:bg-gray-950 border border-gray-200 dark:border-gray-800 rounded-lg focus:outline-none focus:ring-1 focus:ring-emerald-500 text-gray-900 dark:text-white"
                       />
                     </div>

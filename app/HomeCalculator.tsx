@@ -131,8 +131,9 @@ export default function HomeCalculator() {
                   <span className="absolute inset-y-0 left-0 pl-3 flex items-center text-gray-400">₹</span>
                   <input
                     type="number"
+                    min="0"
                     value={grossSalary || ""}
-                    onChange={(e) => setGrossSalary(Number(e.target.value))}
+                    onChange={(e) => setGrossSalary(Math.max(0, Number(e.target.value)))}
                     className="w-full pl-8 pr-3 py-2 text-sm bg-gray-50 dark:bg-gray-950 border border-gray-200 dark:border-gray-800 rounded-lg focus:outline-none focus:ring-1 focus:ring-emerald-500 text-gray-900 dark:text-white"
                     placeholder="0"
                   />
@@ -147,8 +148,9 @@ export default function HomeCalculator() {
                   <span className="absolute inset-y-0 left-0 pl-3 flex items-center text-gray-400">₹</span>
                   <input
                     type="number"
+                    min="0"
                     value={otherIncome || ""}
-                    onChange={(e) => setOtherIncome(Number(e.target.value))}
+                    onChange={(e) => setOtherIncome(Math.max(0, Number(e.target.value)))}
                     className="w-full pl-8 pr-3 py-2 text-sm bg-gray-50 dark:bg-gray-950 border border-gray-200 dark:border-gray-800 rounded-lg focus:outline-none focus:ring-1 focus:ring-emerald-500 text-gray-900 dark:text-white"
                     placeholder="0"
                   />
@@ -202,8 +204,9 @@ export default function HomeCalculator() {
                 </span>
                 <input
                   type="number"
+                  min="0"
                   value={basic80C || ""}
-                  onChange={(e) => setBasic80C(Number(e.target.value))}
+                  onChange={(e) => setBasic80C(Math.max(0, Number(e.target.value)))}
                   className="w-full px-3 py-2 text-sm bg-gray-50 dark:bg-gray-950 border border-gray-200 dark:border-gray-800 rounded-lg focus:outline-none focus:ring-1 focus:ring-emerald-500 text-gray-900 dark:text-white"
                   placeholder="e.g. 150000"
                 />
@@ -218,8 +221,9 @@ export default function HomeCalculator() {
                 </span>
                 <input
                   type="number"
+                  min="0"
                   value={medical80D || ""}
-                  onChange={(e) => setMedical80D(Number(e.target.value))}
+                  onChange={(e) => setMedical80D(Math.max(0, Number(e.target.value)))}
                   className="w-full px-3 py-2 text-sm bg-gray-50 dark:bg-gray-950 border border-gray-200 dark:border-gray-800 rounded-lg focus:outline-none focus:ring-1 focus:ring-emerald-500 text-gray-900 dark:text-white"
                   placeholder="e.g. 25000"
                 />
@@ -234,8 +238,9 @@ export default function HomeCalculator() {
                 </span>
                 <input
                   type="number"
+                  min="0"
                   value={homeLoan24B || ""}
-                  onChange={(e) => setHomeLoan24B(Number(e.target.value))}
+                  onChange={(e) => setHomeLoan24B(Math.max(0, Number(e.target.value)))}
                   className="w-full px-3 py-2 text-sm bg-gray-50 dark:bg-gray-950 border border-gray-200 dark:border-gray-800 rounded-lg focus:outline-none focus:ring-1 focus:ring-emerald-500 text-gray-900 dark:text-white"
                   placeholder="e.g. 0"
                 />
@@ -250,8 +255,9 @@ export default function HomeCalculator() {
                 </span>
                 <input
                   type="number"
+                  min="0"
                   value={hraExemption || ""}
-                  onChange={(e) => setHraExemption(Number(e.target.value))}
+                  onChange={(e) => setHraExemption(Math.max(0, Number(e.target.value)))}
                   className="w-full px-3 py-2 text-sm bg-gray-50 dark:bg-gray-950 border border-gray-200 dark:border-gray-800 rounded-lg focus:outline-none focus:ring-1 focus:ring-emerald-500 text-gray-900 dark:text-white"
                   placeholder="0"
                 />
@@ -266,8 +272,9 @@ export default function HomeCalculator() {
                 </span>
                 <input
                   type="number"
+                  min="0"
                   value={nps80CCD1B || ""}
-                  onChange={(e) => setNps80CCD1B(Number(e.target.value))}
+                  onChange={(e) => setNps80CCD1B(Math.max(0, Number(e.target.value)))}
                   className="w-full px-3 py-2 text-sm bg-gray-50 dark:bg-gray-950 border border-gray-200 dark:border-gray-800 rounded-lg focus:outline-none focus:ring-1 focus:ring-emerald-500 text-gray-900 dark:text-white"
                   placeholder="0"
                 />
@@ -282,8 +289,9 @@ export default function HomeCalculator() {
                 </span>
                 <input
                   type="number"
+                  min="0"
                   value={employerNps80CCD2 || ""}
-                  onChange={(e) => setEmployerNps80CCD2(Number(e.target.value))}
+                  onChange={(e) => setEmployerNps80CCD2(Math.max(0, Number(e.target.value)))}
                   className="w-full px-3 py-2 text-sm bg-gray-50 dark:bg-gray-950 border border-gray-200 dark:border-gray-800 rounded-lg focus:outline-none focus:ring-1 focus:ring-emerald-500 text-gray-900 dark:text-white"
                   placeholder="0"
                 />
@@ -298,8 +306,9 @@ export default function HomeCalculator() {
                 </span>
                 <input
                   type="number"
+                  min="0"
                   value={professionalTax || ""}
-                  onChange={(e) => setProfessionalTax(Number(e.target.value))}
+                  onChange={(e) => setProfessionalTax(Math.max(0, Number(e.target.value)))}
                   className="w-full px-3 py-2 text-sm bg-gray-50 dark:bg-gray-950 border border-gray-200 dark:border-gray-800 rounded-lg focus:outline-none focus:ring-1 focus:ring-emerald-500 text-gray-900 dark:text-white"
                   placeholder="2400"
                 />
@@ -314,8 +323,9 @@ export default function HomeCalculator() {
                 </span>
                 <input
                   type="number"
+                  min="0"
                   value={otherDeductions + ltaExemption || ""}
-                  onChange={(e) => setOtherDeductions(Number(e.target.value))}
+                  onChange={(e) => setOtherDeductions(Math.max(0, Number(e.target.value)))}
                   className="w-full px-3 py-2 text-sm bg-gray-50 dark:bg-gray-950 border border-gray-200 dark:border-gray-800 rounded-lg focus:outline-none focus:ring-1 focus:ring-emerald-500 text-gray-900 dark:text-white"
                   placeholder="0"
                 />
@@ -337,8 +347,9 @@ export default function HomeCalculator() {
                 <span className="absolute inset-y-0 left-0 pl-3 flex items-center text-gray-400">₹</span>
                 <input
                   type="number"
+                  min="0"
                   value={epfMonthly || ""}
-                  onChange={(e) => setEpfMonthly(Number(e.target.value))}
+                  onChange={(e) => setEpfMonthly(Math.max(0, Number(e.target.value)))}
                   className="w-full pl-8 pr-3 py-2 text-sm bg-gray-50 dark:bg-gray-950 border border-gray-200 dark:border-gray-800 rounded-lg focus:outline-none focus:ring-1 focus:ring-emerald-500 text-gray-900 dark:text-white"
                   placeholder="e.g. 15000"
                 />

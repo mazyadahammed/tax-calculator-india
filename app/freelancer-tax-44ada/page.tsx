@@ -87,8 +87,9 @@ export default function FreelancerTax44adaPage() {
                   <span className="absolute inset-y-0 left-0 pl-3 flex items-center text-gray-400">₹</span>
                   <input
                     type="number"
+                    min="0"
                     value={grossReceipts || ""}
-                    onChange={(e) => setGrossReceipts(Number(e.target.value))}
+                    onChange={(e) => setGrossReceipts(Math.max(0, Number(e.target.value)))}
                     className="w-full pl-8 pr-3 py-2 text-sm bg-gray-50 dark:bg-gray-950 border border-gray-200 dark:border-gray-800 rounded-lg focus:outline-none focus:ring-1 focus:ring-emerald-500 text-gray-900 dark:text-white"
                   />
                 </div>
@@ -119,8 +120,9 @@ export default function FreelancerTax44adaPage() {
                   <span className="absolute inset-y-0 left-0 pl-3 flex items-center text-gray-400">₹</span>
                   <input
                     type="number"
+                    min="0"
                     value={otherIncome || ""}
-                    onChange={(e) => setOtherIncome(Number(e.target.value))}
+                    onChange={(e) => setOtherIncome(Math.max(0, Number(e.target.value)))}
                     className="w-full pl-8 pr-3 py-2 text-sm bg-gray-50 dark:bg-gray-950 border border-gray-200 dark:border-gray-800 rounded-lg focus:outline-none focus:ring-1 focus:ring-emerald-500 text-gray-900 dark:text-white"
                   />
                 </div>
