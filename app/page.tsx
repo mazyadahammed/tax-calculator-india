@@ -6,7 +6,6 @@ import SchemaScript from "@/components/SchemaScript";
 import VerificationBadge from "@/components/VerificationBadge";
 import TrustBadge from "@/components/TrustBadge";
 import FaqSection from "@/components/FaqSection";
-import HilltopAdBanner from "@/components/HilltopAdBanner";
 
 const TITLE = "Clarvio — Global Personal Finance Hub & Calculators";
 const DESCRIPTION =
@@ -160,8 +159,6 @@ export default function HomePage() {
           ))}
         </div>
       </div>
-
-      <HilltopAdBanner />
 
       {/* Unified Tools & Directory section */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">

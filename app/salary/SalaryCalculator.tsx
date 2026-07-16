@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useMemo } from "react";
-import HilltopAdBanner from "@/components/HilltopAdBanner";
 import fyData from "@/data/tax-years/fy-2025-26.json";
 import TrustBadge from "@/components/TrustBadge";
 import {
@@ -180,8 +179,6 @@ export default function SalaryCalculator() {
               </div>
             </div>
           </div>
-
-          <HilltopAdBanner />
 
           {/* Salary-specific disclaimer */}
           <TrustBadge context="Take-home estimates assume a simplified salary structure. Actual in-hand pay may differ based on allowances, perquisites, and employer-specific payroll policies." />

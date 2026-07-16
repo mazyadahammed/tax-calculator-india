@@ -5,7 +5,6 @@ import Link from "next/link";
 import FaqSection from "@/components/FaqSection";
 import VerificationBadge from "@/components/VerificationBadge";
 import SchemaScript from "@/components/SchemaScript";
-import HilltopAdBanner from "@/components/HilltopAdBanner";
 import { webApplicationSchema, faqPageSchema, breadcrumbSchema } from "@/lib/schema";
 
 const TITLE = "UAE Salary & Gratuity Calculator 2026 | Dubai Labour Law";
@@ -258,8 +257,6 @@ export default function UaeCalculator() {
             </div>
           </div>
           
-          {/* Left Column Ad */}
-          <HilltopAdBanner />
         </div>
 
         {/* Results Panel */}
@@ -346,9 +343,6 @@ export default function UaeCalculator() {
               <strong>💡 Legal Disclaimer:</strong> This calculator provides estimations based on standard formulas outlined in the UAE Labour Law (Decree Law No. 33 of 2021). The final calculation depends on your specific employment contract clauses, company policies, and official confirmation from your Human Resources department.
             </div>
           </div>
-
-          {/* Right Column Ad */}
-          <HilltopAdBanner />
 
           {/* Explanatory Labor Law Content */}
           <div className="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-xl p-6 shadow-sm space-y-4">

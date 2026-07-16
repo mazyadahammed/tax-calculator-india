@@ -3,7 +3,6 @@ import Link from "next/link";
 import { SITE_URL, SITE_NAME } from "@/lib/siteConfig";
 import SchemaScript from "@/components/SchemaScript";
 import { faqPageSchema, breadcrumbSchema } from "@/lib/schema";
-import HilltopAdBanner from "@/components/HilltopAdBanner";
 
 const TITLE = "How to Reduce Debt Fast: Snowball vs Avalanche | Clarvio";
 const DESCRIPTION =
@@ -129,10 +128,6 @@ export default function DebtPayoffPage() {
             <strong>Pros:</strong> Saves you the absolute maximum amount of money in interest charges, paying off debt faster mathematically.
           </p>
         </div>
-      </div>
-
-      <div className="max-w-3xl mx-auto">
-        <HilltopAdBanner />
       </div>
 
       {/* Related Guides — Internal linking */}

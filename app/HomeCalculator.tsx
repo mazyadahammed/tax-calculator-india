@@ -13,7 +13,6 @@ import {
 import TrustBadge from "@/components/TrustBadge";
 import VerificationBadge from "@/components/VerificationBadge";
 import AffiliateSavings from "@/components/AffiliateSavings";
-import HilltopAdBanner from "@/components/HilltopAdBanner";
 
 export default function HomeCalculator() {
   const config = fyData as unknown as TaxYearConfig;
@@ -334,6 +333,8 @@ export default function HomeCalculator() {
             </div>
           </div>
 
+          <TrustBadge context="Old Regime allows deductions like 80C, 80D, HRA. New Regime offers a higher ₹75,000 standard deduction and lower slab rates but no investment deductions." />
+
           {/* Take Home Salary Settings Card */}
           <div className="bg-white dark:bg-gray-900 rounded-xl p-5 border border-gray-200 dark:border-gray-800 shadow-sm space-y-4">
             <h2 className="text-lg font-bold text-gray-900 dark:text-white border-b border-gray-100 dark:border-gray-800 pb-2">
@@ -362,7 +363,7 @@ export default function HomeCalculator() {
           </div>
           
           {/* Ad slot below left column inputs */}
-          <HilltopAdBanner />
+
         </div>
 
         {/* Right Column: Live results & Comparison */}
@@ -508,7 +509,7 @@ export default function HomeCalculator() {
           <AffiliateSavings />
 
           {/* Ad slot below right column cards */}
-          <HilltopAdBanner />
+
 
           {/* Fresher's Guide Card */}
           <div className="bg-emerald-50/50 dark:bg-emerald-950/10 rounded-xl p-5 border border-emerald-100 dark:border-emerald-900/50 space-y-4">
